@@ -6,7 +6,7 @@
   {{ block.shopify_attributes }}
 >
   {%- if section.blocks.size == 1 -%}
-    <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+    <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
       {%- if section.blocks.first.settings.text != blank -%}
         {%- if section.blocks.first.settings.link != blank -%}
           <a href="{{ section.blocks.first.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
@@ -53,7 +53,6 @@
             <div
               class="slideshow__slide slider__slide grid__item grid--1-col"
               id="Slide-{{ section.id }}-{{ forloop.index }}"
-              {{ block.shopify_attributes }}
               role="group"
               aria-roledescription="{{ 'sections.announcements.announcement' | t }}"
               aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
